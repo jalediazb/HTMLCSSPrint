@@ -4,9 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="stylesheet" href="css/print.css">
   </head>
   <body>
+    <section>
+      <h2>INFORMACIÓN BÁSICA DE PROTECCIÓN DE DATOS</h2>
+
+        <p>
+          <strong>Responsable</strong>: El responsable del tratamiento de sus datos es: MADERAS SANTANA, S.L., con CIF B38045688 y domicilio en  Calle Jardín, 5, 38390 - Santa Úrsula (Santa Cruz De Tenerife).</p>
+
+        <p>
+          <strong>Finalidad</strong>:</p>
+        <ul>
+          <li>Los datos serán utilizados para gestión de nuestros clientes.</li>
+          <li>Remisión de comunicaciones comerciales.</li>
+        </ul>
+
+        <p>
+          <strong>Legitimación</strong>: Relación contractual y consentimiento del interesado.</p>
+
+        <p>
+          <strong>Destinatarios</strong>: Se podrán realizar cesiones a las empresas del grupo, así como a los prestadores de servicio imprescindibles para llevar a cabo el mismo.</p>
+
+        <p>
+          <strong>Derechos</strong>: Puede ejercer sus derechos de acceso, rectificación, cancelación y oposición, portabilidad y limitación, a no ser objeto de decisiones automatizadas y a retirar el consentimiento prestado.</p>
+
+        <p>
+          <strong>Información adicional</strong>: Puede solicitar información adicional y detallada sobre protección de datos en el siguiente correo-e informacion@grupo-santana.com.</p>
+
+        <p>Para poder enviarle información importante y que disfrute de todas nuestras ventajas, por favor, autorícenos marcando con una “X” las casillas para cada uno de los tratamientos:</p>
+
+        <table>
+          <tr>
+            <td>
+              <strong>DNI:</strong>
+            </td>
+            <td>@{outputs('getCustomer')?['body/taxRegistrationNumber']}</td>
+            <td style="padding-left:12px">
+              <strong>Teléfono: </strong>
+            </td>
+            <td>@{outputs('getCustomer')?['body/phoneNumber']}</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Nombre:</strong>
+            </td>
+            <td>@{outputs('getCustomer')?['body/displayName']}</td>
+            <td style="padding-left:12px">
+              <strong>Email: </strong>
+            </td>
+            <td>@{outputs('getCustomer')?['body/email']}</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Dirección:</strong>
+            </td>
+            <td>@{outputs('getCustomer')?['body/addressLine1']}</td>
+            <td style="padding-left:12px">
+              <strong>Municipio: </strong>
+            </td>
+            <td>@{outputs('getCustomer')?['body/city']}</td>
+          </tr>
+        </table>
+
+        <p>
+          <input type="checkbox"> Sí, deseo recibir comunicaciones comerciales de MADERAS SANTANA, S.L. con la finalidad de mantenerme informado de los eventos, promociones y novedades  del sector.
+    </p>
+
+        <h3 style="margin-bottom:80px">Firma</h3>
+
+        <p>Fecha: @{formatDateTime(utcNow(),'dd-MM-yyyy')}</p>
+    </section>
     <h1>Envio: <small>180524-NORTE</small>
     </h1>
     <p>
