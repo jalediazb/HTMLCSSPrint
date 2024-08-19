@@ -3,7 +3,7 @@
     size: A4 portrait;
     margin: 15mm;
   }
-  thead th {
+  thead th, th, td, h1, h2, h3 {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -25,7 +25,7 @@ p {
 }
 
 hr {
-  border: 1px solid #000000b0;
+  border: 0.5pt solid #777;
   border-top: none;
 }
 
@@ -39,11 +39,13 @@ h2 {
 h3 {
   font-size: 13pt;
 }
+h1, h2, h3 {
+  font-weight: 400 !important;
+}
 strong {
   font-weight: bold;
 }
 small {
-  font-weight: lighter;
   font-size: 90%;
 }
 time {
@@ -57,11 +59,12 @@ table {
   font-size: 9pt;
 }
 thead th {
-  background-color: #000000b0;
+  background-color: #777;
   color: #fff;
 }
+
 th, td {
   padding: 2pt;
   text-align: left;
-  border: 1px solid #000000b0;
+  border: 1pt solid #777 !important;
 }
